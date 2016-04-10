@@ -34,19 +34,19 @@ public class JavaAudioPlaySoundExample {
 
         //random time generator for Voice
         Random randTime = new Random();
-        int randomCount = randTime.nextInt(25)+5;
+        int randomCount = randTime.nextInt(25)+15;
         System.out.println("Next sound in "+randomCount+" minutes");
 
         //random time generator for Mouse
-        int mouseMove = randTime.nextInt(25)+5;
+        int mouseMove = randTime.nextInt(25)+15;
         System.out.println("Next mouse move in "+mouseMove+" minutes");
 
         //random time generator for MouseClick Reverse
-        int clickReverse = randTime.nextInt(15)+5;
+        int clickReverse = randTime.nextInt(15)+15;
 
         while (true) {
             //VOICES
-            if (voiceClock.returnMinutes() == randomCount) {
+            if (voiceClock.returnSeconds() == randomCount) {
                 //Select the file to open as a sound
                 SoundSelection soundSelection = new SoundSelection();
 
@@ -62,11 +62,11 @@ public class JavaAudioPlaySoundExample {
 
                 //reset clock
                 voiceClock.startTime();
-                randomCount = randTime.nextInt(25)+5;
+                randomCount = randTime.nextInt(25)+15;
                 System.out.println("Next sound in "+randomCount+" minutes");
             }
             //MOUSE LOCATION
-            if (mouseClock.returnMinutes() == mouseMove && master.returnMinutes() > 15){
+            if (mouseClock.returnSeconds() == mouseMove && master.returnMinutes() > 15){
                 Robot robot = new Robot();
 
                 //inverse MOUSE X Y POSITION
@@ -81,11 +81,11 @@ public class JavaAudioPlaySoundExample {
 
                 //reset mouse clock
                 mouseClock.startTime();
-                mouseMove = randTime.nextInt(25)+5;
+                mouseMove = randTime.nextInt(25)+15;
                 System.out.println("Next mouse move in "+mouseMove+" minutes");
             }
             //MOUSE CLICK
-            if (clickClock.returnMinutes() == clickReverse && master.returnMinutes() > 40){
+            if (clickClock.returnSeconds() == clickReverse && master.returnMinutes() > 40){
                 //Let me know
                 System.out.println("Click reversed");
                 //startup Windows SystemParameters
@@ -101,7 +101,7 @@ public class JavaAudioPlaySoundExample {
 
                 //reset count
                 clickClock.startTime();
-                clickReverse = randTime.nextInt(15)+5;
+                clickReverse = randTime.nextInt(15)+15;
             }
         }
     }
