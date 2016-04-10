@@ -66,7 +66,7 @@ public class JavaAudioPlaySoundExample {
                 System.out.println("Next sound in "+randomCount+" minutes");
             }
             //MOUSE LOCATION
-            if (mouseClock.returnSeconds() == mouseMove && master.returnMinutes() > 15){
+            if (mouseClock.returnSeconds() == mouseMove && master.returnSeconds() > 15){
                 Robot robot = new Robot();
 
                 //inverse MOUSE X Y POSITION
@@ -85,7 +85,7 @@ public class JavaAudioPlaySoundExample {
                 System.out.println("Next mouse move in "+mouseMove+" minutes");
             }
             //MOUSE CLICK
-            if (clickClock.returnSeconds() == clickReverse && master.returnMinutes() > 40){
+            if (clickClock.returnSeconds() == clickReverse && master.returnSeconds() > 40){
                 //Let me know
                 System.out.println("Click reversed");
                 //startup Windows SystemParameters
