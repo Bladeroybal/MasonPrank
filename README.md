@@ -15,3 +15,7 @@ The actual output artifact in the artifact folder happens every 15-30 seconds an
 1. Create a new folder in Rainmeter named Debug: ```C:\Program Files\Rainmeter\Defaults\Debug```
 2. Place the sound Files from the Media Github folder and the .jar of choice into this new desktop folder
 3. Place the batch file from the Media Github folder into the desktop startup folder: ```C:\Users\[name]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup```
+
+# RainmeterDebug Jars
+* Actual live version: ```Final Jar/RainmeterDebug.jar```
+* Accelerated Testing:  ```out/RainmeterDebug_jar/RainmeterDebug.jar```
